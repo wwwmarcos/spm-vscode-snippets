@@ -3,7 +3,7 @@ Snippets from spm project
 
 Options
 
-- [x] Controller - Controller with config
+- [x] Simple Controller - Controller with config
 - [x] IIFE - Simple IIFE
 - [x] func-injec - Function and $inject
 
