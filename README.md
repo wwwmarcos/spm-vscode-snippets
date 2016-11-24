@@ -1,6 +1,8 @@
 # spm-vscode-snippets
 Snippets from spm project
 
+![demo](https://media.giphy.com/media/26tkmA2zCGepHvM4M/source.gif)
+
 Options
 
 - [x] Simple Controller - Controller with config
