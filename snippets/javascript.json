@@ -1,0 +1,67 @@
+{{  
+   "Print to console":{  
+      "prefix":"log",
+      "body":[  
+         "console.log('$1 {}', $1)"
+      ],
+      "description":"console.log('any {}', any)"
+   },
+   "IIFE":{  
+      "prefix":"IIFE",
+      "body":[  
+         "(function() {",
+         "  'use strict'",
+         "",
+         "   angular",
+         "    .module('$1', [])",
+         "})()"
+      ],
+      "description":"Immediately Invoked Function Expression (IIFE)."
+   },
+   "Function Inject":{  
+      "prefix":"func-inject",
+      "body":[  
+        "$1.$inject = ['$2'];",
+        "function $1($2) {",
+        "  $3",  
+        "};"
+      ],
+      "description":"Function and $inject"
+   },
+   "spmController":{
+     "prefix": "spmController",
+     "body": [
+      "(function () {",
+      " 'use strict'",
+      "",
+      " angular",
+      "   .module('${1}', [])",
+      "   .config(config)",
+      "   .controller('${1}Controller', ${1}Controller)",
+      "",
+      " config.$inject = ['$stateProvider']",
+      " function config($stateProvider) {",
+      "   $stateProvider",
+      "     .state('app.${3}-${2}', {",
+      "       url: '/${3}/${2}',",
+      "       templateProvider: templateProvider,",
+      "       controller: '${1}Controller',",
+      "       controllerAs: 'vm'",
+      "     })",
+      "",
+      "    templateProvider.$inject = ['TemplateUrlPathFactory', '$templateFactory']",
+      "    function templateProvider(TemplateUrlPathFactory, $templateFactory) {",
+      "     var url = TemplateUrlPathFactory.getPathUrlSPM() + '/${3}/${3}-${2}.html'",
+      "     return $templateFactory.fromUrl(url)",
+      "   }",
+      " }",
+      "",
+      "${1}Controller.$inject = []",
+      "function ${1}Controller() {",
+      " var vm = this",
+      " ${4}",
+      " }",
+     "} ())"
+     ]
+   }
+}}

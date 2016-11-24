@@ -1,0 +1,16 @@
+{
+    "name": "spmSnippets",
+    "publisher": "marcosflorencio",
+    "description": "SPM Project Snippets",
+    "version": "0.1.0",
+    "engines": { "vscode": "0.10.x" },
+    "categories": ["Snippets"], 
+    "contributes": {
+        "snippets": [
+            {
+                "language": "javascript",
+                "path": "./snippets/javascript.json"
+            }
+        ]
+    }
+}
